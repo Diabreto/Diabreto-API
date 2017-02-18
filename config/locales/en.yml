@@ -23,3 +23,4 @@ en:
   invalid_login: "Invalid login"
   user_not_authenticated: "User not authenticated"
   user_not_authorized: "User not authorized"
+  record_not_found: "Record not found"
