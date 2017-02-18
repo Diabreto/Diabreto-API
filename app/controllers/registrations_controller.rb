@@ -1,5 +1,6 @@
-class Users::RegistrationsController < Devise::RegistrationsController
+class RegistrationsController < Devise::RegistrationsController
   acts_as_token_authentication_handler_for User, fallback: :devise
+  skip_before_action :user_is_logged_in
 
   def create
     @user = User.new(user_params)

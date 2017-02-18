@@ -26,3 +26,20 @@
 	}
 }
 ```
+
+####Update user
+
+- PUT /api/users/\<id\>
+- Body example:
+```
+{
+	"full_name": "Ola ole",
+	"glycemia_unit": 0,
+	"carbohydrates_to_unit": 1,
+	"glycemia_target": 100,
+	"insulin_to_unit": 1,
+	"correction_factor": 2,
+	"hyperglycemia_threshold": 130,
+	"hypoglycemia_threshold": 20 
+}
+```
