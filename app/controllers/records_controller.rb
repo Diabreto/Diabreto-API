@@ -26,7 +26,7 @@ class RecordsController < ApplicationController
   end
 
   def index
-    @records = current_user.records
+    @records = current_user.records.order(:date)
   end
 
   private
