@@ -3,8 +3,9 @@ Rails.application.routes.draw do
     devise_for :users,
                path: 'users',
                controllers: {
-                 registrations: 'users/registrations',
-                 sessions: 'users/sessions'
+                 registrations: 'registrations',
+                 sessions: 'sessions'
                }
+    resources :users
   end
 end

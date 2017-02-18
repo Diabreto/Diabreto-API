@@ -1,4 +1,5 @@
-class Users::SessionsController < Devise::SessionsController
+class SessionsController < Devise::SessionsController
+  skip_before_action :user_is_logged_in
 
   def create
     self.resource = warden.authenticate(auth_options)
