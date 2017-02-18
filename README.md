@@ -1,24 +1,28 @@
-# README
+# Readme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+####Register user
 
-Things you may want to cover:
+- POST /api/users
+- Body example:
+```
+{
+	"user": {
+		"email": "olaaaaa@oale.com",
+		"password": "asdasasad",
+		"username": "olla"
+	}
+}
+```
 
-* Ruby version
+####Login user
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- POST /api/users/sign_in
+- Body example:
+```
+{
+	"user": {
+		"email": "olaaaaa@asfasoale.com",
+		"password": "asdasasad"
+	}
+}
+```
