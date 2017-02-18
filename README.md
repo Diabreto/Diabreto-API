@@ -43,3 +43,11 @@
 	"hypoglycemia_threshold": 20 
 }
 ```
+
+###Get a record
+
+- GET /api/records/< id >
+
+###Get all user records
+
+- GET /api/records
