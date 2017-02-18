@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170218102137) do
+ActiveRecord::Schema.define(version: 20170218121551) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20170218102137) do
     t.string   "encrypted_password",      default: "",    null: false
     t.string   "authentication_token"
     t.string   "username",                default: "",    null: false
-    t.float    "glycemia_unit",           default: 0.0,   null: false
+    t.string   "glycemia_unit",           default: "0.0", null: false
     t.float    "carbohydrates_to_unit",   default: 1.0,   null: false
     t.float    "target_glycemia",         default: 100.0, null: false
     t.float    "insulin_to_unit",         default: 1.0,   null: false

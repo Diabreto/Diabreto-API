@@ -7,5 +7,6 @@ Rails.application.routes.draw do
                  sessions: 'sessions'
                }
     resources :users
+    resources :records
   end
 end
