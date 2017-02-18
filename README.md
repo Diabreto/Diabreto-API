@@ -27,7 +27,7 @@
 }
 ```
 
-####Login user
+####Update user
 
 - PUT /api/users/\<id\>
 - Body example:
