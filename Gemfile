@@ -32,6 +32,8 @@ gem 'devise'
 gem 'simple_token_authentication'
 
 gem 'rb-readline'
+gem 'factory_girl_rails'
+gem 'faker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
