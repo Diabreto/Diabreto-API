@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   def update_params
     params.permit(:glycemia_unit,
                   :carbohydrates_to_unit,
-                  :glycemia_target,
+                  :target_glycemia,
                   :insulin_to_unit,
                   :correction_factor,
                   :hyperglycemia_threshold,
