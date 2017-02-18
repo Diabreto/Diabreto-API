@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170218063218) do
+ActiveRecord::Schema.define(version: 20170218102137) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "records", force: :cascade do |t|
+    t.datetime "date"
+    t.float    "glycemia"
+    t.float    "carbohydrates"
+    t.float    "meal_insulin"
+    t.float    "correction_insulin"
+    t.float    "activity"
+    t.text     "notes"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_records_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                   default: "",    null: false
@@ -22,7 +36,7 @@ ActiveRecord::Schema.define(version: 20170218063218) do
     t.string   "username",                default: "",    null: false
     t.float    "glycemia_unit",           default: 0.0,   null: false
     t.float    "carbohydrates_to_unit",   default: 1.0,   null: false
-    t.float    "glycemia_target",         default: 100.0, null: false
+    t.float    "target_glycemia",         default: 100.0, null: false
     t.float    "insulin_to_unit",         default: 1.0,   null: false
     t.float    "correction_factor",       default: 1.0,   null: false
     t.float    "hyperglycemia_threshold", default: 120.0, null: false
@@ -42,4 +56,5 @@ ActiveRecord::Schema.define(version: 20170218063218) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "records", "users"
 end
