@@ -33,7 +33,7 @@ module RecordsHelper
     reversed_sorted_records = get_records_in_time_range(group_records(records), time_range).sort_by{
       |k| k[:timestamp]
     }.reverse
-    if (DateTime.now - Time.at(reversed_sorted_records.first[:timestamp]).to_date).to_i > 2
+    if (DateTime.now - Time.at(reversed_sorted_records.first[:timestamp]).to_date).to_i > 1
       return []
     end
     consistent_dates = [reversed_sorted_records.first]

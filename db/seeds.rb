@@ -12,7 +12,7 @@ joaobot = User.create(email: "joao@hotmail.com", username: "joaobot", password: 
 jb = User.create(email: "jb@hotmail.com", username: "jb", password: "123456")
 
 r = Random.new
-time = DateTime.now
+time = DateTime.now - 1.day
 for i in 0..200
   rand = r.rand(60..180)
   time -= rand.minutes

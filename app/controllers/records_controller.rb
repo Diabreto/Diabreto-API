@@ -47,7 +47,6 @@ class RecordsController < ApplicationController
 
   def update_predictions(time_range)
     records = RecordsHelper.consistent_dates(current_user.records, time_range)
-    byebug
     if records.size > 3
       if Time.at(records.second[:timestamp]) - Time.at(records.first[:timestamp]) > 1.day
         obj = {
@@ -67,7 +66,6 @@ class RecordsController < ApplicationController
                                  "Content-Type" => "application/json",
                                  "x-access-token" => Rails.application.secrets.unplugg_api_base
                                })
-      byebug
     end
 
   end
