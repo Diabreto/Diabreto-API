@@ -1,1 +1,2 @@
-json.array! @records
+json.prediction @prediction
+json.records @records

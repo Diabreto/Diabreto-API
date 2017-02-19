@@ -9,7 +9,7 @@
 pedrocb = User.create(email: "pedro@hotmail.com", username: "pedrocb", password: "123456")
 tiagobot = User.create(email: "tiago@hotmail.com", username: "tiagobot", password: "123456")
 joaobot = User.create(email: "joao@hotmail.com", username: "joaobot", password: "123456")
-jb = User.create(email: "jb@hotmail.com", username: "jb", password: "12345")
+jb = User.create(email: "jb@hotmail.com", username: "jb", password: "123456")
 
 r = Random.new
 time = DateTime.now

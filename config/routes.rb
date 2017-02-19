@@ -8,5 +8,6 @@ Rails.application.routes.draw do
                }
     resources :users
     resources :records
+    post '/unplugg_callback', to: 'predictions#callback'
   end
 end

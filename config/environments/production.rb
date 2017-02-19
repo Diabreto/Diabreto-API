@@ -46,6 +46,8 @@ Rails.application.configure do
   # when problems arise.
   config.log_level = :debug
 
+  config.action_controller.default_url_options = {:host => "www.pedrobelem.com"}
+
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
 
