@@ -1,6 +1,7 @@
 class PredictionsController < ActionController::Base
 
   def callback
+    print params
     predictions = params[:forecast]
     first = predictions.first
     date = Time.at(first[:timestamp])

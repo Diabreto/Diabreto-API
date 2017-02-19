@@ -1,5 +1,5 @@
 class RecordsController < ApplicationController
-  CALLBACK = "www.pedrobelem.com/unplugg_callback"
+  CALLBACK = "http://www.pedrobelem.com/api/unplugg_callback"
 
   def create
     @record = current_user.records.new(create_params)
@@ -66,7 +66,7 @@ class RecordsController < ApplicationController
                                  "Content-Type" => "application/json",
                                  "x-access-token" => Rails.application.secrets.unplugg_api_base
                                })
-      print response
+      print request
     end
 
   end
