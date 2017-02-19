@@ -66,6 +66,7 @@ class RecordsController < ApplicationController
                                  "Content-Type" => "application/json",
                                  "x-access-token" => Rails.application.secrets.unplugg_api_base
                                })
+      print response
     end
 
   end
